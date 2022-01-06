@@ -41,10 +41,7 @@ public class UserService {
                headers.setContentType(MediaType.APPLICATION_JSON);
                HttpEntity<Object> entity = new HttpEntity<Object>(headers);
                final String uri = "https://reqres.in/api/users";
-          
-                
-             
-               
+
                ResponseEntity<User> response = 
             		   restTemplate.exchange(uri, HttpMethod.GET, entity, User.class);
                
