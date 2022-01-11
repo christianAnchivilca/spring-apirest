@@ -1,5 +1,8 @@
 package com.spring.apirest.service;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Matchers.isNull;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 
@@ -44,12 +47,15 @@ public class UserServiceTest {
 	@Test
 	void getUsers() {
 		
-		User u = new User();
-		u.setPage(1);
-		u.setTotal(12);
+	
           
-		   when(restTemplate.exchange("https://reqres.in/api/users", HttpMethod.GET,entity,User.class))
-		   .thenReturn(new ResponseEntity(u, HttpStatus.OK));
+		 when(userService.getUsers().get(0).getEmail()).thenReturn("george.bluth@reqres.in");
+
+		    String result = userService.getUsers().get(0).getEmail();
+
+		    assertEquals("george.bluth@reqres.in", "incorrect@gmail.com", result);
+
+		    verify(userService.getUsers().get(0).getEmail());
 		   
 		   
 		

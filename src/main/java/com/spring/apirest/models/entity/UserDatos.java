@@ -3,30 +3,20 @@ package com.spring.apirest.models.entity;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+
 
 public class UserDatos implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue
+
 	private long id;
 	private String email;
 	private String first_name;
 	private String last_name;
 	private String avatar;
 	
-
-	
-	
-	
-	
-	
-	
-
 
 	public long getId() {
 		return id;
