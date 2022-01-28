@@ -37,10 +37,7 @@ public class UserRepository {
 	        headers.setContentType(MediaType.APPLICATION_JSON);
 	        
 	        HttpEntity<Object> entity = new HttpEntity<Object>(headers);
-    
-		
-
-		        ResponseEntity<User> response =restTemplate.exchange(url, HttpMethod.GET, entity, User.class);
+		        ResponseEntity<User> response =restTemplate.exchange("https://reqres.in/api/users", HttpMethod.GET, entity, User.class);
 		        
 		        User body = response.getBody();
 		        
