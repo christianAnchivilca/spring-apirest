@@ -3,12 +3,12 @@ package com.spring.apirest.models.entity;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Entity;
 
 
 
 
-@Entity
+
+
 public class User implements Serializable{
 	
 	
